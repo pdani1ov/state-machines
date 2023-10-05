@@ -1,0 +1,6 @@
+{
+  "name": "converter",
+  "scripts": {
+    "run": "ts-node-esm converter.ts"
+  }
+}
