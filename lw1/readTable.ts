@@ -117,7 +117,7 @@ function convertToMooreStates(strs: Array<string>, countOfIn: number, countOfSta
                 for (let inSignal = 1; inSignal <= countOfIn; inSignal++) {
                     let s = state.stateTransitions.get(inSignal)
                     if (s != undefined) {
-                        mooreStates[mooreIndex].stateTransitions.set(inSignal + 1, getMealyTransitionsIndex(mooreToMealy, s) + 1)
+                        mooreStates[mooreIndex].stateTransitions.set(inSignal, getMealyTransitionsIndex(mooreToMealy, s) + 1)
                     }
                 }
             }
@@ -235,7 +235,7 @@ function createTable(filename: string): [Array<Object>, Array<Object>, string[]]
             for (const [input, next] of state.stateTransitions) {
                 edges.push({
                     from: index,
-                    to: next,
+                    to: next - 1,
                     label: `${input}`,
                     length: 250,
                 })
