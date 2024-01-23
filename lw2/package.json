@@ -1,0 +1,6 @@
+{
+  "name": "minimization",
+  "scripts": {
+    "run": "ts-node-esm minimization.ts"
+  }
+}
